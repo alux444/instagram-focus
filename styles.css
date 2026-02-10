@@ -1,0 +1,15 @@
+/* Hide Explore nav link */
+a[href="/explore/"] {
+  display: none !important;
+}
+
+/* Hide Reels nav link */
+a[href="/reels/"] {
+  display: none !important;
+}
+
+/* Hide "Suggested for you" sections in feed */
+article._aalx,
+div[style] > div > article._aalx {
+  /* handled by JS for precision */
+}
