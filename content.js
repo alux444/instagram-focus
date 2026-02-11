@@ -90,6 +90,16 @@
     hideSuggestedContent();
   }
 
+  let clickCount = 0;
+  const successAudio = new Audio(chrome.runtime.getURL("success.mp3"));
+  document.addEventListener("click", () => {
+    clickCount++;
+    if (clickCount % 100 === 0) {
+      successAudio.currentTime = 0;
+      successAudio.play();
+    }
+  });
+
   // Run immediately
   run();
 
